@@ -52,5 +52,26 @@ console.log(typeof anotherid); //symbol
 // All datatype of non primitive is object , incase of function it is called function-object
 
 
+// ++++++++++     stack and heap memory   ++++++++++++++++
 
+// Stack (Primitive) , Heap (Non - Primitive) 
+//Stack
+let ashPokemon = "Greninja"
 
+let ashstrongest = ashPokemon
+ashstrongest = "Lukario"
+
+console.log(ashstrongest); //Lukario
+console.log(ashPokemon); //Greninja
+
+//Heap
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+//Properties access by (.)
+userTwo.email = "xzy@google.com"
+console.log(userOne.email); //xyz@gmail.com
+console.log(userTwo.email); //xyz@gmail.com
