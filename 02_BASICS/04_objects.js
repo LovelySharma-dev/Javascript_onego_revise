@@ -56,12 +56,52 @@ const users = [
     }
 ]
 users[1].email
-console.log(snapusers); //{ id: '123abc', name: 'Snapy', isLoggedIn: false }
+// console.log(snapusers); //{ id: '123abc', name: 'Snapy', isLoggedIn: false }
 
 // important
-console.log(Object.keys(snapusers)); //[ 'id', 'name', 'isLoggedIn' ]
-console.log(Object.values(snapusers)); //[ '123abc', 'Snapy', false ]
-console.log(Object.entries(snapusers)); //[ [ 'id', '123abc' ], [ 'name', 'Snapy' ], [ 'isLoggedIn', false ] ]
+// console.log(Object.keys(snapusers)); //[ 'id', 'name', 'isLoggedIn' ]
+// console.log(Object.values(snapusers)); //[ '123abc', 'Snapy', false ]
+// console.log(Object.entries(snapusers)); //[ [ 'id', '123abc' ], [ 'name', 'Snapy' ], [ 'isLoggedIn', false ] ]
 
 
 console.log(snapusers.hasOwnProperty('isLoggedIn')); //true
+
+
+// Destructing an object
+const course = {
+    coursename: "Js",
+    price: "999",
+    courseInstructor: "Sam"
+}
+// course.courseInstructor
+
+// const {value to be extracted} = course
+const {courseInstructor} = course
+
+// If name is long can also rename it
+const {courseInstructor: instructor} = course 
+// console.log(instructor); //sam
+
+console.log(courseInstructor); //Sam
+
+// in react destructuring {} syntax
+// const navbar = ({company}) => {
+
+// }
+// navbar(company ="shenna")
+
+//API are the values from the backend and how u store the,
+// JSON structure{}
+// {
+//     "name": "Nobita",
+//     "username": "nobisuke",
+//     "channel": "hungama"
+// }
+
+
+// Sometimes api are in array format[] like this
+[
+    {},
+    {},
+    {}
+]
