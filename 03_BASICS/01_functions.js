@@ -64,5 +64,45 @@ function logkouserko(uname = "sam"){
     }
     return `${uname} abhi login kiya`
 }
-console.log(logkouserko("lovely")); //lovely abhi login kiyar
+// console.log(logkouserko("lovely")); //lovely abhi login kiyar
 
+// +++++++++++++++++++++++++++++++
+
+// IF multiple values in argument then only 1st one is printed if ... rest operator is not used
+
+// function calculateCartPrice(...num1){
+//     return num1
+// }
+// console.log(calculateCartPrice(200, 400, 500, 100)) //[ 200, 400, 500, 100 ]
+
+function calculateCartPrice(val1, val2, ...num1){
+    return num1
+}
+console.log(calculateCartPrice(200, 400, 500, 100)) //[ 500, 100 ]
+
+//how an object is passed in an function and used
+
+const user = {
+    user_name: "lovely",
+    price: 199
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.user_name} and price is ${anyobject.price}`);
+    
+}
+// handleObject(user) //Username is lovely and price is 199
+
+// Another way
+handleObject({
+    user_name: "sam",
+    price: 299 
+})//Username is sam and price is 299
+
+// Array passing in function
+const myNewArray = [200, 400, 100, 600]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 400, 500, 1000])); //400
