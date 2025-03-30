@@ -1,0 +1,19 @@
+# Call Stack (LIFO principle)
+meaning that the last function called is the first one to be resolved.
+## Learnt In Browser Inspect Sources by using snippets and breakpiont 
+here is the code ---->
+
+```function one() {
+    console.log("One")
+    Two()
+}
+function Two() {
+    console.log("Two")
+    Three()
+}
+function Three() {
+    console.log("Three")
+}
+one()
+Two()
+Three()```
