@@ -51,6 +51,12 @@ for (const [key, value] of map) {
 // USA --> United States of America
 // Fr --> France
 
+// for in
+for (const key in map) {
+    console.log(key);
+    
+}//no output as map is not iteratable
+
 // for of loop on a object
 const myObject = {
     'game1' : 'NFS',
