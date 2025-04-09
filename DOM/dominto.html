@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM learn</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-    <div id="bg-black">
-        <h1>DOM is the Document Object Model</h1>
+<body  class="bg-black">
+    <div>
+        <h1 id = "title" class="heading">DOM is the Document Object Model</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, voluptate!</p>
     </div>
 </body>
@@ -20,6 +26,37 @@
 
  document.getElementById('...')
  document.getElementById('...').innerHTML = "<h1>Lets do it right</h1>"
+ -->
+ <!-- 
+ 
+document.getElementById('title')
+<h1 id=​"title" class=​"heading">​DOM is the Document Object Model​</h1>​
+document.getElementById('title').class
+undefined
+document.getElementById('title').className
+'heading'
+document.getElementById('title').id
+'title'
+document.getElementById('title').getAttribute
+ƒ getAttribute() { [native code] }
+document.getElementById('title').getAttribute(id)
+error
+document.getElementById('title').getAttribute("id")
+'title'
+ -->
 
- 
- 
+
+ <!-- Basically set overwrites the attribute. -->
+ <!-- document.getElementById('title').setAttribute("class", 'test')
+undefined
+$0
+<h1 id=​"title" class=​"test">​DOM is the Document Object Model​</h1>​ -->
+
+<!-- const title = document.getElementById('title')
+undefined
+title
+<h1 id=​"title" class=​"test">​DOM is the Document Object Model​</h1>​
+title.st
+undefined
+title.style.backgroundColor = "green"
+'green' -->
