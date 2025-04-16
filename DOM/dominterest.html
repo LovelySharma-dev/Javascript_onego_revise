@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learn</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body  class="bg-black">
+    <div>
+        <h1 id = "title" class="heading">DOM is the Document Object Model
+            <span style="display: none;">test text</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet cojjjjjnsectetur, adipisicing elit. Deserunt, voluptate!</p>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <input type="password" name="" id="">
+    </div>
+    <div>
+        <ul>
+            <li class="li">one</li>
+            <li class="li">two</li>
+            <li class="li">three</li>
+            <li class="li">four</li>
+        </ul>
+    </div>
+    <script>
+    </script>
+</body>
+</html>
+<!-- IN CONSOLE -->
+ 
+<!-- 
+title.style.background = 'green'
+'green'
+title.style.padding = '12px'
+'12px'
+title.style.borderRadius = '10px'
+'10px'
+
+title
+<h1 id=​"title" class=​"heading" style=​"background:​ green;​ padding:​ 12px;​ border-radius:​ 10px;​">​DOM is the Document Object Model​</h1>​
+title.textContent
+'DOM is the Document Object Model'
+title.innerHTML
+'DOM is the Document Object Model'
+title.innerText
+'DOM is the Document Object Model'
+
+-->
+<!-- Difference between innerHTML,Text,TextContent -->
+<!-- If additional text added with display none
+
+title.textContent
+'DOM is the Document Object Model\n            test text\n        
+title.innerText
+'DOM is the Document Object Model
+
+title.innerHTML
+'DOM is the Document Object Model\n            <span style="display: none;">test text</span>\n 
+ -->
+
+<!-- Qwery Selectors -->
+
+<!-- This below one selects the 1st element mentioned in page --1st h1 -->
+<!-- document.querySelector('h1')
+<h1 id=​"title" class=​"heading">​"DOM is the Document Object Model "<span style=​"display:​ none;​">​test text​</span>​</h1>​ -->
+
+<!-- Id and Class -->
+<!-- 
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector('.heading')
+<h1 id=​"title" class=​"heading">​…​</h1>​ 
+-->
+
+<!-- 
+document.querySelector('input[type="password"]')
+<input type=​"password" name id>​
+
+document.querySelector('p:first-child')
+null
+-->
+
+<!-- Changing color -->
+<!-- 
+document.querySelector('ul')
+<ul>​…​</ul>​
+const myul = document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li>​…​</li>​
+const turnGreen = myul.querySelector('li')
+undefined
+turnGreen.style.backgroundColor = 'green'
+'green' 
+
+turnGreen.innerText 
+'one'
+turnGreen.innerText = 'five'
+'five'
+-->
+
+<!-- 
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]
+0: li 1: li 2: li length: 3 
+[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+-->
+
+<!-- 
+const tempLilist = document.querySelectorAll('li')
+undefined
+-->
+<!-- REMEMBER -->
+<!-- Nodelist and html collections are not pure array -->
+
+<!-- 
+trmpLilist
+NodeList(3) [li, li, li]
+trmpLilist.style.color = 'green'
+error
+trmpLilist[0].style.color = 'green'
+'green'
+-->
+
+<!-- 
+const trmpLilist = document.querySelectorAll('li')
+undefined
+trmpLilist
+NodeList(3) [li, li, li]
+
+trmpLilist.forEach(function (l) {
+    l.style.backgroundColor = 'green'
+})
+undefined
+-->
+
+<!-- 
+document.getElementsByClassName('list-item')
+HTMLCollection [4]
+
+-->
+<!-- COVERTING HTMLcollection into Array -->
+<!--
+Array.from(tempClassList)                                   ----thismethod
+
+[]length: 0
+[[Prototype]]: Array(0) 
+-->
+
+<!-- 
+const myConvertedArray= Array.from(tempClassList)
+undefined
+
+myConvertedArray
+[]
+
+myConvertedArray.forEach(function(li){
+    li.style.color = 'pink'
+})
+-->
