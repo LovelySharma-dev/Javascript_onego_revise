@@ -50,6 +50,7 @@
 
         // document.getElementById('owl').addEventListener('click', function(e){
         // console.log("owl clicked");
+        // // stopprogation() //--to stop the bubbling
         // },false) 
         //owl clicked 
         //Clicked inside the ul
@@ -58,17 +59,45 @@
 
 //____________2.
 
-        document.getElementById('images').addEventListener('click', function(e){
-        console.log("Clicked inside the ul");
-        },true)
+        // document.getElementById('images').addEventListener('click', function(e){
+        // console.log("Clicked inside the ul");
+        // },true)
 
-        document.getElementById('owl').addEventListener('click', function(e){
-        console.log("owl clicked");
-        },true)
+        // document.getElementById('owl').addEventListener('click', function(e){
+        // console.log("owl clicked");
+        // },true)
         // Clicked inside the ul
         // owl clicked
         // Event capturing is a process in the DOM event model where events are first intercepted by the outermost element and then propagated down to the target element. It is the opposite of event bubbling, where events originate at the target and propagate upwards
 
+        // removing the pics from the screen by click__________________
+        
+        // document.getElementById('google').addEventListener
+        // ('click', function(e){
+        //     e.preventDefault()
+        //     e.stopPropagation()
+        //     console.log("google clicked");   
+        // }, false)
+
+        // document.querySelector('#images').addEventListener
+        // ('click', function(e){
+        //     console.log(e.target.parentNode);//ul 
+        //     let removeIt = e.target.parentNode
+
+        //     removeIt.remove()//approach first
+        //     // removeIt.parentNode.removeChild(removeIt)//another approach
+        // }, false)
+
+        document.querySelector('#images').addEventListener
+        ('click', function(e){
+            console.log(e.target.tagName);
+            if (e.target.tagName === 'IMG') {
+                console.log(e.target.id);
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+            }
+        }, false)
+        
     </script>
 </body>
 </html>
