@@ -33,6 +33,7 @@ JavaScript (JS) is a high-level, dynamic programming language primarily used for
 - **Data Visualization**: Using D3.js and Chart.js.
 
 ## Important JavaScript Topics
+#### Global Execution context refers to browser is window object.
 
 ### 1. JavaScript Basics
 - Variables (`let`, `const`, `var`)
