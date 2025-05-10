@@ -70,15 +70,16 @@
         // owl clicked
         // Event capturing is a process in the DOM event model where events are first intercepted by the outermost element and then propagated down to the target element. It is the opposite of event bubbling, where events originate at the target and propagate upwards
 
-        // removing the pics from the screen by click__________________
         
-        // document.getElementById('google').addEventListener
-        // ('click', function(e){
-        //     e.preventDefault()
-        //     e.stopPropagation()
-        //     console.log("google clicked");   
-        // }, false)
 
+        document.getElementById('google').addEventListener
+        ('click', function(e){
+            e.preventDefault()//The preventDefault() method in JavaScript is used to stop the default action of an HTML element
+            e.stopPropagation()//stops the bubbling of an event to parent elements, preventing any parent event handlers from being executed.
+            console.log("google clicked");   
+        }, false)
+
+        // removing the pics from the screen by click__________________
         // document.querySelector('#images').addEventListener
         // ('click', function(e){
         //     console.log(e.target.parentNode);//ul 
