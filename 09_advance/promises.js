@@ -114,3 +114,9 @@ fetch("https://jsonplaceholder.typicode.com/users")
 .catch((error)=>{
     console.log(error)
 })
+
+// The Fetch API provides an interface for fetching resources (including across the network). It is a more powerful and flexible replacement for XMLHttpRequest.
+// A fetch() promise only rejects when a network error is encountered(which is usually when there is a permission issuse or similar).
+// A fetch() promise does not reject on HTTP errors(404, etc)
+
+// More notes in notebook
