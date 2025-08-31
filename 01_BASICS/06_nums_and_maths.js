@@ -73,5 +73,22 @@ const max = 20
 
 console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 
+/*
+Step by step:
 
+Math.random() → gives a random number between 0 (inclusive) and 1 (exclusive). Example: 0.57.
 
+Math.random() * (max - min + 1)
+
+(max - min + 1) → 20 - 10 + 1 = 11.
+
+So now it’s a random number between 0 and 11 (not including 11).
+
+Math.floor(...) → rounds the number down to the nearest whole number.
+Example: 7.89 becomes 7.
+
+→ Now we have an integer between 0 and 10.
+
++ min → shifts the range up so it starts at 10 instead of 0.
+
+→ Final result: a random integer between 10 and 20 (inclusive). */
