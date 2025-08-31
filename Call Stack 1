@@ -3,7 +3,8 @@ meaning that the last function called is the first one to be resolved.
 ## Learnt In Browser Inspect Sources by using snippets and breakpiont 
 here is the code ---->
 
-```function one() {
+```
+function one() {
     console.log("One")
     Two()
 }
