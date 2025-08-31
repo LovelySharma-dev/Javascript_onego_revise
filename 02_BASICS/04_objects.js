@@ -20,6 +20,12 @@ const regularUser = {
 }
 // console.log(regularUser.fullname.userfullname.lastname); //Sharma //access more subobjects by .
 
+// console.log(regularUser.fullname?.userfullname.lastname); 
+// chain---->
+// This only checks if fullname exists.
+// If fullname is undefined → whole expression becomes undefined.
+// But it does not check userfullname.
+
 // In API responses use this syntax
 // console.log(regularUser.fullname?.userfullname.lastname);
 
